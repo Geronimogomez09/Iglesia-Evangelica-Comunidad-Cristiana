@@ -1,0 +1,242 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ================= FONTS ================= */
+
+
+/* ================= VARIABLES ================= */
+:root {
+    --bordo: #7b1e2b;
+    --bordo-oscuro: #5a141f;
+    --blanco: #ffffff;
+    --dorado: #d4af37;
+    --gris-claro: #f5f5f5;
+}
+
+/* ================= ESTRUCTURA GENERAL ================= */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: var(--gris-claro);
+    color: #333;
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= HEADER COMPACTO ================= */
+header {
+    background: linear-gradient(90deg, var(--bordo), var(--bordo-oscuro));
+    color: var(--blanco);
+    padding: 10px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    animation: fadeDown 0.8s ease;
+}
+
+/* Logo */
+header img {
+    width: 55px;
+}
+
+/* Título */
+header h1 {
+    font-size: 1.3rem;
+    color: var(--dorado);
+    margin: 0 20px;
+    white-space: nowrap;
+    font-family: 'Cinzel', serif;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Links */
+.menu a {
+    padding: 10px 14px;
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+    transition: all 0.3s ease;
+    font-family: 'Cinzel', serif;
+}
+
+/* Línea dorada animada */
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--dorado);
+    left: 50%;
+    bottom: 4px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 60%;
+    left: 20%;
+}
+
+.menu a:hover {
+    color: var(--dorado);
+}
+
+/* ================= SUBMENU ================= */
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background-color: var(--bordo);
+    min-width: 190px;
+    border-radius: 6px;
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.35s ease;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.dropdown:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.submenu li a {
+    padding: 10px 14px;
+    font-weight: normal;
+    font-size: 0.9rem;
+    font-family: 'Cinzel', serif;
+}
+
+.submenu li a:hover {
+    background-color: var(--bordo-oscuro);
+}
+
+/* ================= MAIN ================= */
+main {
+    flex: 1;
+    padding: 60px 20px;
+    animation: fadeUp 0.8s ease;
+}
+
+section {
+    max-width: 900px;
+    margin: auto;
+    background-color: var(--blanco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid var(--dorado);
+}
+
+section p {
+    font-size: 1.1rem;
+    text-align: center;
+}
+body {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("galeria/imagen_fondo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: var(--bordo-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+/* ================= ANIMACIONES ================= */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header h1 {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .submenu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+    }
+}

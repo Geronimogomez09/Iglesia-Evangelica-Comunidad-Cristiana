@@ -2,63 +2,100 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>Iglesia Evangélica Comunidad Cristiana</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iglesia Evangelica Comunidad Cristiana-Inicio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="galeria/Logo.jpg" type="image/png">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="galeria/Logo-sin-fondo.png" type="image/png">
 </head>
 <body>
-    <header>
-            <img src="galeria/Logo.jpg" alt="logo de la Iglesia">
-            <h1>Iglesia Evangélica Comunidad Cristiana</h1>
-        <nav class="navbar">
-                    <ul class="menu">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li class="dropdown"> <a href="#">Nosotros</a>
-            <ul class="submenu">
-                <li><a href="historia.html">Historia</a></li>
-                <li><a href="mision.html">Misión y Visión</a></li>
-                <li><a href="equipo.html">Equipo Pastoral</a></li>
-            </ul>
-        </li>
 
-        <li><a href="reuniones.html">Reuniones</a></li>
-        <li><a href="galeria.html">Galería</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-        </nav>
-    </header>
-<main id="main">
-    <!-- LOGO BOTÓN -->
-    <div class="logo-contenedor">
-        <img src="galeria/Logo.jpg" alt="Logo Iglesia" id="logo">
-        <p class="mensaje">Hacé click en el logo para ver los artículos</p>
+<header>
+    <img src="galeria/Logo-sin-fondo.png" alt="Logo">
+    <h1>Iglesia Evangélica Comunidad Cristiana</h1>
+    <p id="fecha" class="fecha-actual"></p>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">Nosotros</a>
+                <ul class="submenu">
+                    <li><a href="#">Historia</a></li>
+                    <li><a href="#">Misión y Visión</a></li>
+                    <li><a href="#">Equipo Pastoral</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Reuniones</a></li>
+            <li><a href="#">Galería</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- INTRO -->
+    <div id="intro">
+    <img src="galeria/Logo-sin-fondo.png" id="logo" alt="Logo Iglesia">
     </div>
 
-    <!-- CONTENIDO -->
-    <div id="contenido">
-        <section class="articulo">
-            <h2>Artículo 1</h2>
-            <p>Contenido del artículo...</p>
-        </section>
+<div class="contenido" id="contenido">
 
-        <section class="articulo">
-            <h2>Artículo 2</h2>
-            <p>Contenido del artículo...</p>
-        </section>
+    <a href="historia.html" class="card">
+        <div class="card-img">
+            <img src="galeria/Logo-sin-fondo.png" alt="Historia">
+        </div>
+        <span>Historia</span>
+    </a>
 
-        <section class="articulo">
-            <h2>Artículo 3</h2>
-            <p>Contenido del artículo...</p>
-        </section>
-    </div>
+    <a href="mision.html" class="card">
+        <div class="card-img">
+            <img src="galeria/Logo-sin-fondo.png" alt="Misión">
+        </div>
+        <span>Misión</span>
+    </a>
+
+    <a href="equipo.html" class="card">
+        <div class="card-img">
+            <img src="galeria/Logo-sin-fondo.png" alt="Equipo">
+        </div>
+        <span>Equipo</span>
+    </a>
+
+    <a href="reuniones.html" class="card">
+        <div class="card-img">
+            <img src="galeria/Logo-sin-fondo.png" alt="Reuniones">
+        </div>
+        <span>Reuniones</span>
+    </a>
+
+    <a href="galeria.html" class="card">
+        <div class="card-img">
+            <img src="galeria/Logo-sin-fondo.png" alt="Galería">
+        </div>
+        <span>Galería</span>
+    </a>
+
+    <a href="contacto.html" class="card">
+        <div class="card-img">
+            <img src="galeria/Logo-sin-fondo.png" alt="Contacto">
+        </div>
+        <span>Contacto</span>
+    </a>
+
+</div>
+
+
 </main>
-    <footer>
-        <p>&copy; 2026 Iglesia Evangélica Comunidad Cristiana</p>
-    </footer>
-    <script src="script.js"></script>
+
+<footer>
+    © 2026 Iglesia Evangélica Comunidad Cristiana
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
